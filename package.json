@@ -8,6 +8,9 @@
     "build": "npm run build:contentscript-background",
     "watch:contentscript-background": "NODE_ENV=development webpack --config webpack.config.js -w",
     "watch": "npm-run-all watch:*",
+    "clean": "del dist && cpy manifest.json dist && cpy src/assets/* dist/assets",
+    "prebuild": "npm run clean",
+    "prewatch": "npm run clean",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,6 +20,7 @@
     "@types/chrome": "^0.0.178",
     "@types/node": "^17.0.18",
     "awesome-typescript-loader": "^5.2.1",
+    "cpy-cli": "^3.1.1",
     "css-loader": "^6.6.0",
     "mini-css-extract-plugin": "^2.5.3",
     "node-sass": "^7.0.1",
