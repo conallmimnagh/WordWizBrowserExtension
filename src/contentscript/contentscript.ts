@@ -1,3 +1,3 @@
 import './contentscript.scss';
 
-console.log('Content Script PAge');
+console.log('Content Script Page');
