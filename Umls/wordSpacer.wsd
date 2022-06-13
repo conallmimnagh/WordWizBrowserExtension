@@ -1,0 +1,20 @@
+## UML for chaning word spacing and stlye for extension
+
+
+```plantuml
+@startuml wordSpacer
+    skinparam backgroundColor #EEEBDC
+    skinparam handwritten true 
+    actor User
+    User -> "login()" : email & password
+    "login()" -> User : session token
+    activate "login()"
+    User -> "change Spacing and colur of text()" : session token, word style info
+    "change Spacing and colur of text()" -> User : new styling settings saved
+    User -> "View text with new style()" : word style info settings
+    "View text with new style()" -> User : Words displayed in new style
+    User -> "logout()"
+    "logout()" -> User : ok
+    deactivate "login()"
+@enduml 
+```
