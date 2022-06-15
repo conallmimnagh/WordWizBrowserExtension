@@ -25,6 +25,6 @@
     "128": "assets/icon.png"
   },
   "action": {
-    "default_popup": "displays/textStyle.html"
+    "default_popup": "src/displays/textStyle.html"
   }
   }
