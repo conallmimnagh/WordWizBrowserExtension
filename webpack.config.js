@@ -2,6 +2,7 @@ const { CheckerPlugin } = require('awesome-typescript-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { optimize } = require('webpack');
 const { join } = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 let prodPlugins = [];
 if (process.env.NODE_ENV === 'production') {
   prodPlugins.push(
@@ -38,6 +39,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/displays/textStyle.html',
+      filename: 'textStyle.html',
     }),
   ],
   resolve: {
